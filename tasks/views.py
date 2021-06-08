@@ -22,7 +22,7 @@ def getIndexList(request):
 
     to_json_file = serializers.serialize("json", indexList)
 
-    return HttpResponse(task_json, content_type="application/json")
+    return HttpResponse(to_json_file, content_type="application/json")
 
 @api_view(["DELETE"])
 def deleteIndexList(request):
